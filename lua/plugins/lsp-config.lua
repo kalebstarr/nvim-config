@@ -14,6 +14,7 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
+                    "zls",
                 },
             })
         end,
@@ -29,6 +30,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.clangd.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.zls.setup({
                 capabilities = capabilities,
             })
 
