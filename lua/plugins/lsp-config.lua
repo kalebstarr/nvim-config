@@ -26,17 +26,7 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.zls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.rust_analyzer.setup({
+            vim.slp.config("*", {
                 capabilities = capabilities,
             })
 
