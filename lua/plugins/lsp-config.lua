@@ -15,6 +15,7 @@ return {
                     "lua_ls",
                     "clangd",
                     "zls",
+                    "rust_analyzer",
                 },
             })
         end,
@@ -33,6 +34,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.zls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.rust_analyzer.setup({
                 capabilities = capabilities,
             })
 
